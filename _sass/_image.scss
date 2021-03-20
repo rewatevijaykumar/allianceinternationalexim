@@ -1,0 +1,59 @@
+@-webkit-keyframes flipInX {
+    0% {
+       -webkit-transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+       -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+       -webkit-transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ }
+
+ @keyframes flipInX {
+    0% {
+       transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+       transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+       transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ }
+
+ .flipInX {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+ }
+.mango {
+   .column {
+      padding: 0;
+   }
+    article {
+        // animation: 1s ease infinite pulse;
+
+        &:hover{
+           img {
+               -webkit-backface-visibility: visible !important;
+               backface-visibility: visible !important;
+               animation: flipInX;
+               animation-duration: 1.5s;
+               animation-fill-mode: both;
+               // animation: 1s  ease normal pulse;
+            }
+        }
+    }
+}

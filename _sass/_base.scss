@@ -1,0 +1,27 @@
+/* Rounded border */
+hr.rounded {
+  // border-top: 2px solid #bbb;
+  border-top: 2px solid $orange;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.heading {
+  padding-bottom: 1rem;
+  &:hover {
+      i {
+          color: $orange;
+          font-size: 5rem;
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    hr.rounded {
+        width: 75%;
+      }
+
+}

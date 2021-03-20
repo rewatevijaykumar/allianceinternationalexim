@@ -1,0 +1,32 @@
+.vission {
+    // h1 {
+    //     color: $darkblue !important;
+    // }
+    // h2 {
+    //     color: $rosered !important;
+    // }
+
+
+    @extend .hero;
+    background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../assets/img/vission.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .hero-text {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background: rgba(6, 73, 175, 0.4);
+        border-radius: 3rem;
+    }
+    .title {
+        color: $orange;
+    }
+    .subtitle {
+        color: $white;
+    }
+    strong {
+        color: $orange-light!important;
+    }
+
+}

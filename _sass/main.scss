@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "base";
+@import "colors";
+@import "variables";
+
+@import "header";
+@import "hero";
+@import "aboutus";
+@import "vission";
+@import "products";
+@import "image";
+@import "team";
+@import "contactus";
+@import "footer";
+
+@import "../node_modules/bulma/bulma";

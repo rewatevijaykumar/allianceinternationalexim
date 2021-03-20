@@ -1,0 +1,44 @@
+.hero-top {
+    margin-top:3.5rem;
+}
+
+.has-bg-img {
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../assets/img/home1.jpg')center center;
+    background-size:cover;
+}
+
+.hero-foo {
+  @extend .hero;
+  background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../assets/img/home1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .hero-text {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background: rgba(6, 73, 175, 0.4);
+    border-radius: 3rem;
+  }
+  .title {
+    color: $orange;
+  }
+  .subtitle {
+    color: $white;
+  }
+  strong {
+    color: $orange-light!important;
+  }
+
+}
+
+@media (min-width:1024px){
+  .hero-text {
+    padding: 3rem!important;
+    border-radius: 5rem!important;
+  }
+}
+
+
+// $title-color: $warning;
+// $subtitle-color: $lightorange;

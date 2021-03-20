@@ -1,0 +1,67 @@
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.products {
+    background: rgb(81,245,224);
+    background: -moz-linear-gradient(13deg, rgba(81,245,224,1) 16%, rgba(62,108,187,1) 46%, rgba(150,50,181,1) 68%);
+    background: -webkit-linear-gradient(13deg, rgba(81,245,224,1) 16%, rgba(62,108,187,1) 46%, rgba(150,50,181,1) 68%);
+    background: linear-gradient(13deg, rgba(81,245,224,1) 16%, rgba(62,108,187,1) 46%, rgba(150,50,181,1) 68%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#51f5e0",endColorstr="#9632b5",GradientType=1);
+
+    img {
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+    }
+
+    h1 {
+        padding-top: 1rem;
+    }
+
+    .column {
+        padding-top: 2rem;
+        &:hover{
+            img {
+                animation: bounceIn;
+                animation-duration: 1.5s;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}

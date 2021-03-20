@@ -1,0 +1,13 @@
+.team {
+    border-top: 1px solid rgba(128, 128, 128, 0.164);
+    .column{
+        padding: 2rem;
+    }
+    .card {
+        border-radius: 25px;
+    }
+    img{
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+}

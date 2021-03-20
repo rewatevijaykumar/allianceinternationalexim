@@ -1,0 +1,41 @@
+$footer-padding: 2rem;
+// $footer-color: $white-ter;
+// $footer-background-color:$white-ter;
+
+.footer {
+    background-color: $darkblue!important;
+    .copyright {
+        p {
+            color: $white;
+            padding-top: 1rem;
+        }
+    }
+    .social {
+        padding-top: 3rem;
+
+        p {
+            font-weight: 600;
+            color: $orange;
+        }
+
+        i {
+            color: $orange-light;
+        }
+    }
+    .column {
+        &:hover{
+            .fab{
+                font-size:1.7rem;
+                color: $orange;
+                // transition: 1s ease-out;
+            }
+        }
+    }
+
+    .company {
+        color: $orange;
+    }
+    .heart {
+        color: $rosered;
+    }
+}

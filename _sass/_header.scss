@@ -1,0 +1,94 @@
+$navbar-background-color: $white;
+$navbar-height: 3.5rem;
+$navbar-box-shadow-size: 0px 8px 8px -8px;
+$navbar-box-shadow-color: $shadow;
+// $navbar-item-color: $primary;
+// $navbar-item-hover-color: $orange;
+// $navbar-item-hover-background-color: $lightorange;
+// $navbar-dropdown-item-hover-background-color: $lightorange;
+$navbar-dropdown-arrow: $orange;
+
+.header__logo {
+
+    .navbar-burger {
+        span {
+            height: 0.1rem;
+            width: 1.5rem;
+            margin: 2px;
+            color: #001068;
+        }
+    }
+
+}
+
+.navbar-end {
+    .navbar-item {
+        .fas {
+            font-size:1.4rem;
+            color: $orange;
+        // transition: 1s ease-out;
+        }
+        .icon-text {
+            color: $blue;
+        }
+
+        &:hover{
+            background-color: $lightorange;
+
+            .fas {
+                font-size:1.5rem;
+                color: $blue;
+            // transition: 1s ease-out;
+            }
+            .icon-text {
+                color: $darkorange;
+            }
+            .navbar-link{
+                &:hover{
+                    background-color: $lightorange;
+                }
+            }
+        }
+    }
+    .navbar-dropdown{
+        .navbar-item{
+            .fas {
+                font-size:1.4rem;
+                color: $orange;
+            // transition: 1s ease-out;
+            }
+            .icon-text {
+                color: $blue;
+            }
+            &:hover{
+                background-color: $lightorange;
+
+                .fas {
+                    font-size:1.5rem;
+                    color: $blue;
+                // transition: 1s ease-out;
+                }
+                .icon-text {
+                    color: $darkorange;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        img {
+            width: 240px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-brand {
+        img {
+            width: 350px;
+        }
+    }
+}
