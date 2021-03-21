@@ -6,12 +6,12 @@
     //     color: $rosered !important;
     // }
 
-
-    @extend .hero;
     background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../assets/img/vission.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @extend .hero;
 
     .hero-text {
         padding-top: 3rem;
@@ -27,6 +27,11 @@
     }
     strong {
         color: $orange-light!important;
+    }
+    .column {
+        padding: 3rem;
+        position: relative;
+        box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
     }
 
 }

@@ -94,11 +94,11 @@ hr.rounded {
 
 @keyframes border {
   0%, 100% {
-    -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
-    clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))); }
+    -webkit-clip-path: polygon(0 0, calc(100% - (0.5rem)) calc(0% + (0.5rem)), 100% 100%, calc(0% + (0.5rem)) calc(100% - (0.5rem)));
+    clip-path: polygon(0 0, calc(100% - (0.5rem)) calc(0% + (0.5rem)), 100% 100%, calc(0% + (0.5rem)) calc(100% - (0.5rem))); }
   50% {
-    -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
-    clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%); } }
+    -webkit-clip-path: polygon(calc(0% + (0.5rem)) calc(0% + (0.5rem)), 100% 0, calc(100% - (0.5rem)) calc(100% - (0.5rem)), 0 100%);
+    clip-path: polygon(calc(0% + (0.5rem)) calc(0% + (0.5rem)), 100% 0, calc(100% - (0.5rem)) calc(100% - (0.5rem)), 0 100%); } }
 
 .aboutus {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/img/mission.jpg");
@@ -117,30 +117,9 @@ hr.rounded {
   .aboutus strong {
     color: #FFC600 !important; }
   .aboutus .column {
+    padding: 3rem;
     position: relative;
     box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75); }
-    .aboutus .column:after, .aboutus .column:before {
-      mix-blend-mode: multiply;
-      filter: none;
-      z-index: -1;
-      content: '';
-      width: calc(100% + (50px * 2));
-      height: calc(100% + (50px * 2));
-      position: absolute;
-      display: block;
-      animation: border 10s ease-in-out infinite;
-      transform: translateX(-50px) translateY(-50px); }
-    .aboutus .column:after {
-      animation-delay: -5s;
-      background-color: #93e1d8;
-      clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))); }
-    .aboutus .column:before {
-      background-color: #AA4465;
-      clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%); }
-    .aboutus .column:hover:after {
-      animation-delay: -0.1s; }
-    .aboutus .column:hover:before, .aboutus .column:hover:after {
-      animation-duration: 0.2s; }
 
 .vission {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/img/vission.jpg");
@@ -158,6 +137,10 @@ hr.rounded {
     color: #ffffff; }
   .vission strong {
     color: #FFC600 !important; }
+  .vission .column {
+    padding: 3rem;
+    position: relative;
+    box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75); }
 
 @-webkit-keyframes bounceIn {
   0% {

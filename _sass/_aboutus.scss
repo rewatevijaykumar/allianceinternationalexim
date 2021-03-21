@@ -1,11 +1,11 @@
 @keyframes border {
     0%, 100% {
-      -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
-              clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+      -webkit-clip-path: polygon(0 0, calc(100% - (0.5rem)) calc(0% + (0.5rem)), 100% 100%, calc(0% + (0.5rem)) calc(100% - (0.5rem)));
+              clip-path: polygon(0 0, calc(100% - (0.5rem)) calc(0% + (0.5rem)), 100% 100%, calc(0% + (0.5rem)) calc(100% - (0.5rem)));
     }
     50% {
-      -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
-              clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+      -webkit-clip-path: polygon(calc(0% + (0.5rem)) calc(0% + (0.5rem)), 100% 0, calc(100% - (0.5rem)) calc(100% - (0.5rem)), 0 100%);
+              clip-path: polygon(calc(0% + (0.5rem)) calc(0% + (0.5rem)), 100% 0, calc(100% - (0.5rem)) calc(100% - (0.5rem)), 0 100%);
     }
   }
 
@@ -17,12 +17,13 @@
     //     color: $rosered !important;
     // }
 
-
-    @extend .hero;
     background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../assets/img/mission.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @extend .hero;
+
 
     .hero-text {
         padding-top: 3rem;
@@ -40,42 +41,9 @@
         color: $orange-light!important;
     }
     .column {
+        padding: 3rem;
         position: relative;
         box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
-
-        &:after, &:before {
-            mix-blend-mode: multiply;
-            filter: none;
-            z-index: -1;
-            content: '';
-            width: calc(100% + (50px * 2));
-            height: calc(100% + (50px * 2));
-            position: absolute;
-            display: block;
-            animation: border 10s ease-in-out infinite;
-            transform: translateX(-50px) translateY(-50px);
-          }
-
-          &:after {
-            animation-delay: -5s;
-            background-color: #93e1d8;
-            clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
-          }
-
-          &:before {
-            background-color: #AA4465;
-            clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
-          }
-
-          &:hover {
-            &:after {
-              animation-delay: -0.1s;
-            }
-
-            &:before, &:after {
-              animation-duration: 0.2s;
-            }
-          }
         }
 
 }
