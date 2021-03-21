@@ -64,6 +64,9 @@ hr.rounded {
     width: 350px; } }
 
 @media only screen and (max-width: 1024px) {
+  .navbar-end .ishidden #ProductDropdown {
+    display: none !important;
+    visibility: hidden; }
   .navbar-item.has-dropdown .navbar-dropdown {
     display: none; }
   .navbar-item.has-dropdown:hover .navbar-dropdown {

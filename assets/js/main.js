@@ -22,6 +22,12 @@
             $(".navbar-menu").toggleClass("is-active");
 
         });
+        // Check for click events on the navbar burger icon
+        $(".has-dropdown").click(function() {
+            $(".has-dropdown").toggleClass("ishidden");
+    // $(".tab").addClass("active"); // instead of this do the below
+            // $(this).removeClass("active");
+        });
 
         $('#Hero').waypoint(function() {
             $('.title').addClass('animate__fadeInDown');
