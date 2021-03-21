@@ -22,7 +22,32 @@
             $(".navbar-menu").toggleClass("is-active");
 
         });
-      });
+
+        $('#Hero').waypoint(function() {
+            $('.title').addClass('animate__fadeInDown');
+            $('.subtitle').addClass('animate__backInUp');
+        }, { offset: '100' });
+
+        $('#AboutUs').waypoint(function() {
+            $('.about-title').addClass('animate__fadeInDown');
+            $('.subtitle').addClass('animate__bounce');
+        }, { offset: '100' });
+        $('#Mango').waypoint(function() {
+            $('.image').css({
+                animation: flipInX,
+            });
+        }, { offset: '100' });
+
+    });
+
+    $(document).on("click", function(event){
+        var $trigger = $(".navbar");
+        if($trigger !== event.target && !$trigger.has(event.target).length){
+            // $(".navbar-menu").slideUp("fast");
+            $(".navbar-burger").removeClass("is-active");
+            $(".navbar-menu").removeClass('is-active');
+        }
+    });
 
 
   })(jQuery);

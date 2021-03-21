@@ -53,13 +53,16 @@
     h1 {
         padding-top: 1rem;
     }
+    .box-black {
+        background-color: black;
+    }
 
     .column {
         padding-top: 2rem;
         &:hover{
             img {
                 animation: bounceIn;
-                animation-duration: 1.5s;
+                animation-duration: 3s;
                 animation-fill-mode: both;
             }
         }
