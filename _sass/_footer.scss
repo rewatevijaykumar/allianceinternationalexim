@@ -1,3 +1,46 @@
+@keyframes animateHeart {
+    // scale down and scale up faster in irregular intervals to get the throbbing effect
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1.2);
+    }
+    10% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+@-webkit-keyframes animateHeart {
+    // scale down and scale up faster in irregular intervals to get the throbbing effect
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1.2);
+    }
+    10% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 $footer-padding: 2rem;
 // $footer-color: $white-ter;
 // $footer-background-color:$white-ter;
@@ -20,6 +63,7 @@ $footer-padding: 2rem;
 
         i {
             color: $yellow-light;
+            padding-bottom: 5px;
         }
     }
     .column {
@@ -37,5 +81,9 @@ $footer-padding: 2rem;
     }
     .heart {
         color: $rosered;
+        // animation: <animation-name> <animation-duration> <animation-iteration-count>
+        animation: animateHeart 1.5s infinite;
+        animation-timing-function: ease;
     }
+
 }

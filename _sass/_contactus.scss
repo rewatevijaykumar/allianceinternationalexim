@@ -1,4 +1,44 @@
 .contactus {
     border-top: 1px solid rgba(128, 128, 128, 0.164);
 
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+    .address{
+        h3 {
+            padding: 0rem;
+            color: $grey;
+            &:hover{
+                i {
+                    color: $blue;
+                }
+            }
+        }
+        i {
+            color: $orange;
+        }
+        .image {
+            padding: 2rem;
+        }
+        a {
+            color: $grey;
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
 }
+
+// @media only screen and (max-width: 1024px) {
+//     .contactus{
+//         .address{
+//             .image{
+//                 display: none;
+//             }
+//         }
+//     }
+// }

@@ -47,12 +47,12 @@
 
         &:hover{
            img {
-               -webkit-backface-visibility: visible !important;
-               backface-visibility: visible !important;
-               animation: flipInX;
-               animation-duration: 1.5s;
-               animation-fill-mode: both;
-               // animation: 1s  ease normal pulse;
+               // -webkit-backface-visibility: visible !important;
+               // backface-visibility: visible !important;
+               // animation: flipInX;
+               // animation-duration: 1.5s;
+               // animation-fill-mode: both;
+               animation: 1s  ease normal pulse;
             }
         }
     }

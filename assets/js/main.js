@@ -12,7 +12,7 @@
     $(document).ready(function() {
 
         //initializes the plugin with "light" -theme
-        $('body').overlayScrollbars({ className : "os-theme-thin-dark" });
+        // $('body').overlayScrollbars({ className : "os-theme-thin-dark" });
 
         // Check for click events on the navbar burger icon
         $(".navbar-burger").click(function() {
@@ -29,20 +29,6 @@
             // $(this).removeClass("active");
         });
 
-        $('#Hero').waypoint(function() {
-            $('.title').addClass('animate__fadeInDown');
-            $('.subtitle').addClass('animate__backInUp');
-        }, { offset: '100' });
-
-        $('#AboutUs').waypoint(function() {
-            $('.about-title').addClass('animate__fadeInDown');
-            $('.subtitle').addClass('animate__bounce');
-        }, { offset: '100' });
-        $('#Mango').waypoint(function() {
-            $('.image').css({
-                animation: flipInX,
-            });
-        }, { offset: '100' });
 
     });
 

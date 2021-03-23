@@ -13,9 +13,45 @@ hr.rounded {
     color: #ff7e00;
     font-size: 5rem; }
 
+#scrollBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 1rem;
+  /* Place the button at the bottom of the page */
+  right: 1rem;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  color: #ff7e00;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 1rem;
+  /* Some padding */
+  font-size: 1.5rem;
+  /* Increase font size */ }
+  #scrollBtn:hover {
+    color: #0649af; }
+
 @media screen and (max-width: 768px) {
   hr.rounded {
     width: 75%; } }
+
+@media only screen and (max-width: 1024px) {
+  #scrollBtn {
+    bottom: 5px;
+    /* Place the button at the bottom of the page */
+    right: 5px;
+    /* Place the button 30px from the right */
+    padding: 5px;
+    font-size: 1rem;
+    /* Increase font size */ } }
 
 .header__logo .navbar-burger span {
   height: 0.1rem;
@@ -196,6 +232,9 @@ hr.rounded {
       animation-duration: 3s;
       animation-fill-mode: both; }
 
+.services li {
+  padding: 0.7rem; }
+
 @-webkit-keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotateX(90deg);
@@ -230,11 +269,7 @@ hr.rounded {
   padding: 0; }
 
 .mango article:hover img {
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
-  animation: flipInX;
-  animation-duration: 1.5s;
-  animation-fill-mode: both; }
+  animation: 1s  ease normal pulse; }
 
 .team {
   border-top: 1px solid rgba(128, 128, 128, 0.164); }
@@ -246,8 +281,59 @@ hr.rounded {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px; }
 
+@media only screen and (max-width: 1024px) {
+  .team .column {
+    padding: 1rem; } }
+
 .contactus {
-  border-top: 1px solid rgba(128, 128, 128, 0.164); }
+  border-top: 1px solid rgba(128, 128, 128, 0.164);
+  /* Set the size of the div element that contains the map */ }
+  .contactus #map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */ }
+  .contactus .address h3 {
+    padding: 0rem;
+    color: #495057; }
+    .contactus .address h3:hover i {
+      color: #0649af; }
+  .contactus .address i {
+    color: #ff7e00; }
+  .contactus .address .image {
+    padding: 2rem; }
+  .contactus .address a {
+    color: #495057; }
+    .contactus .address a:hover {
+      color: #0649af; }
+
+@keyframes animateHeart {
+  0% {
+    transform: scale(1); }
+  5% {
+    transform: scale(1.2); }
+  10% {
+    transform: scale(1); }
+  15% {
+    transform: scale(1.5); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+@-webkit-keyframes animateHeart {
+  0% {
+    transform: scale(1); }
+  5% {
+    transform: scale(1.2); }
+  10% {
+    transform: scale(1); }
+  15% {
+    transform: scale(1.5); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
 
 .footer {
   background-color: #000f52 !important; }
@@ -260,14 +346,17 @@ hr.rounded {
       font-weight: 600;
       color: #ff7e00; }
     .footer .social i {
-      color: #FFC600; }
+      color: #FFC600;
+      padding-bottom: 5px; }
   .footer .column:hover .fab {
     font-size: 1.7rem;
     color: #ff7e00; }
   .footer .company {
     color: #ff7e00; }
   .footer .heart {
-    color: #ff033e; }
+    color: #ff033e;
+    animation: animateHeart 1.5s infinite;
+    animation-timing-function: ease; }
 
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -1054,10 +1143,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #4a4a4a !important; }
 
 .has-text-grey {
-  color: #7a7a7a !important; }
+  color: #495057 !important; }
 
 .has-background-grey {
-  background-color: #7a7a7a !important; }
+  background-color: #495057 !important; }
 
 .has-text-grey-light {
   color: #b5b5b5 !important; }
@@ -2254,7 +2343,7 @@ a.box:active {
   .button.is-static {
     background-color: whitesmoke;
     border-color: #dbdbdb;
-    color: #7a7a7a;
+    color: #495057;
     box-shadow: none;
     pointer-events: none; }
   .button.is-rounded {
@@ -3180,31 +3269,31 @@ a.tag:hover {
     background-color: whitesmoke;
     border-color: whitesmoke;
     box-shadow: none;
-    color: #7a7a7a; }
+    color: #495057; }
     .input[disabled]::-moz-placeholder, .textarea[disabled]::-moz-placeholder, .select select[disabled]::-moz-placeholder,
     fieldset[disabled] .input::-moz-placeholder,
     fieldset[disabled] .textarea::-moz-placeholder,
     fieldset[disabled] .select select::-moz-placeholder,
     .select fieldset[disabled] select::-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(73, 80, 87, 0.3); }
     .input[disabled]::-webkit-input-placeholder, .textarea[disabled]::-webkit-input-placeholder, .select select[disabled]::-webkit-input-placeholder,
     fieldset[disabled] .input::-webkit-input-placeholder,
     fieldset[disabled] .textarea::-webkit-input-placeholder,
     fieldset[disabled] .select select::-webkit-input-placeholder,
     .select fieldset[disabled] select::-webkit-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(73, 80, 87, 0.3); }
     .input[disabled]:-moz-placeholder, .textarea[disabled]:-moz-placeholder, .select select[disabled]:-moz-placeholder,
     fieldset[disabled] .input:-moz-placeholder,
     fieldset[disabled] .textarea:-moz-placeholder,
     fieldset[disabled] .select select:-moz-placeholder,
     .select fieldset[disabled] select:-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(73, 80, 87, 0.3); }
     .input[disabled]:-ms-input-placeholder, .textarea[disabled]:-ms-input-placeholder, .select select[disabled]:-ms-input-placeholder,
     fieldset[disabled] .input:-ms-input-placeholder,
     fieldset[disabled] .textarea:-ms-input-placeholder,
     fieldset[disabled] .select select:-ms-input-placeholder,
     .select fieldset[disabled] select:-ms-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(73, 80, 87, 0.3); }
 
 .input, .textarea {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
@@ -3304,7 +3393,7 @@ a.tag:hover {
   .checkbox[disabled], .radio[disabled],
   fieldset[disabled] .checkbox,
   fieldset[disabled] .radio {
-    color: #7a7a7a;
+    color: #495057;
     cursor: not-allowed; }
 
 .radio + .radio {
@@ -3432,7 +3521,7 @@ a.tag:hover {
   .select.is-large {
     font-size: 1.5rem; }
   .select.is-disabled::after {
-    border-color: #7a7a7a; }
+    border-color: #495057; }
   .select.is-fullwidth {
     width: 100%; }
     .select.is-fullwidth select {
@@ -4301,7 +4390,7 @@ a.list-item {
     padding-left: 0.75em; }
 
 .menu-label {
-  color: #7a7a7a;
+  color: #495057;
   font-size: 0.75em;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
@@ -5364,7 +5453,7 @@ a.navbar-item,
     background-color: #dbdbdb;
     border-color: #dbdbdb;
     box-shadow: none;
-    color: #7a7a7a;
+    color: #495057;
     opacity: 0.5; }
 
 .pagination-previous,
@@ -5569,7 +5658,7 @@ label.panel-block {
   text-align: center;
   vertical-align: top;
   width: 1em;
-  color: #7a7a7a;
+  color: #495057;
   margin-right: 0.75em; }
   .panel-icon .fa {
     font-size: inherit;
