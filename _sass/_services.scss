@@ -2,4 +2,13 @@
     li {
         padding: 0.7rem;
     }
+    ul{
+        list-style-type: none !important;
+      }
+    .services-list{
+        i {
+            padding-right: 1rem;
+            color: $darkgreen;
+        }
+    }
 }

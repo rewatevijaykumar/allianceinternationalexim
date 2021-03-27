@@ -235,6 +235,13 @@ hr.rounded {
 .services li {
   padding: 0.7rem; }
 
+.services ul {
+  list-style-type: none !important; }
+
+.services .services-list i {
+  padding-right: 1rem;
+  color: #014421; }
+
 @-webkit-keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotateX(90deg);
